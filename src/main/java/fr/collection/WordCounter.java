@@ -3,7 +3,13 @@ package fr.collection;
 import java.util.HashMap;
 import java.util.Map;
 
+
+/**
+ * Exemple d'utilisation d'objet de la classe "HashMap".
+ * 
+ */
 public class WordCounter {
+
     public static Map<String, Integer> countWordFrequency(String sentence) {
         Map<String, Integer> wordCount = new HashMap<>();
         String[] words = sentence.split("\\s+");
@@ -14,15 +20,5 @@ public class WordCounter {
         }
 
         return wordCount;
-    }
-
-    public static void main(String[] args) {
-        String sentence = "This is a test. This test is only a test.";
-
-        Map<String, Integer> wordFrequency = countWordFrequency(sentence);
-
-        for (Map.Entry<String, Integer> entry : wordFrequency.entrySet()) {
-            System.out.println("Mot : " + entry.getKey() + ", Fréquence : " + entry.getValue());
-        }
     }
 }
